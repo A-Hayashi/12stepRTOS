@@ -13,11 +13,11 @@ OBJDUMP = $(BINDIR)/$(ADDNAME)objdump
 RANLIB  = $(BINDIR)/$(ADDNAME)ranlib
 STRIP   = $(BINDIR)/$(ADDNAME)strip
 
-H8WRITE = ../../tools/h8write/h8write
+H8WRITE = ../../tools/kz_h8write/kz_h8write
 
 # FreeBSD-4.x:/dev/cuaaX, FreeBSD-6.x:/dev/cuadX, FreeBSD(USB):/dev/cuaUx
 # Linux:/dev/ttySx, Linux(USB):/dev/ttyUSBx, Windows:comX
-H8WRITE_SERDEV = /dev/cuad0
+H8WRITE_SERDEV = /dev/serial/by-id/usb-1a86_USB2.0-Ser_-if00-port0
 
 OBJS  = vector.o startup.o main.o
 OBJS += lib.o serial.o
